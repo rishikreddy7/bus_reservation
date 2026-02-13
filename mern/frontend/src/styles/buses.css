@@ -1,0 +1,369 @@
+.buses-container {
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+.buses-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #007bff;
+}
+
+.buses-header h2 {
+  margin: 0;
+  color: #2c3e50;
+  font-size: 32px;
+}
+
+.go-back-btn {
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Search Section */
+.search-section {
+  background-color: #f8f9fa;
+  padding: 30px;
+  border-radius: 8px;
+  margin-bottom: 40px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.search-section h3 {
+  margin-top: 0;
+  color: #2c3e50;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.search-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  align-items: flex-end;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.form-group input {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+/* Buses Grid */
+.buses-info {
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #e7f3ff;
+  border-left: 4px solid #007bff;
+  border-radius: 4px;
+}
+
+.buses-info p {
+  margin: 0;
+  color: #0056b3;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.buses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 25px;
+}
+
+/* Bus Card */
+.bus-card {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.bus-card:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-3px);
+}
+
+.bus-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.bus-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.bus-info h3 {
+  margin: 0;
+  color: #2c3e50;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.bus-type-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.bus-type-badge.deluxe {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.bus-type-badge.sleeper {
+  background-color: #d1ecf1;
+  color: #0c5460;
+}
+
+.bus-type-badge.standard {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.bus-price {
+  text-align: right;
+}
+
+.price-label {
+  display: block;
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.price-value {
+  display: block;
+  font-size: 24px;
+  font-weight: 700;
+  color: #28a745;
+}
+
+/* Bus Details */
+.bus-card-details {
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.detail-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border-radius: 6px;
+}
+
+.detail-label {
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.detail-value {
+  font-size: 14px;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.seats-plenty {
+  color: #28a745 !important;
+  font-weight: 700;
+}
+
+.seats-few {
+  color: #ff6b6b !important;
+  font-weight: 700;
+}
+
+.seats-none {
+  color: #dc3545 !important;
+  font-weight: 700;
+}
+
+/* Seat Indicator */
+.seat-indicator {
+  margin-bottom: 20px;
+}
+
+.indicator-bar {
+  height: 6px;
+  background-color: #e9ecef;
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.indicator-filled {
+  height: 100%;
+  background: linear-gradient(90deg, #ff6b6b, #ffd93d, #6bcf7f);
+  transition: width 0.3s ease;
+}
+
+.indicator-text {
+  font-size: 12px;
+  color: #666;
+  text-align: center;
+  display: block;
+}
+
+/* Buttons */
+.btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-color: #0056b3;
+  transform: scale(1.02);
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #545b62;
+}
+
+.btn-disabled {
+  background-color: #ccc;
+  color: #999;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Alerts */
+.alert {
+  padding: 15px 20px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.alert-info {
+  background-color: #d1ecf1;
+  color: #0c5460;
+  border-left: 4px solid #0c5460;
+}
+
+.alert-warning {
+  background-color: #fff3cd;
+  color: #856404;
+  border-left: 4px solid #856404;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .buses-header {
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
+
+  .search-form {
+    grid-template-columns: 1fr;
+  }
+
+  .buses-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-row {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-item {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .bus-card-header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .bus-info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .bus-price {
+    text-align: left;
+  }
+
+  .buses-header h2 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .buses-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .detail-row {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}
