@@ -22,13 +22,20 @@ const AvailableBuses = () => {
   const fetchAllBuses = async () => {
     try {
       setLoading(true);
-      // Get sample data - you can modify based on your backend
-      const dates = ['2024-03-15', '2024-03-16', '2024-03-17'];
+      // Generate dates for next 3 days starting from today
+      const dates = [];
+      for (let i = 0; i < 3; i++) {
+        const date = new Date();
+        date.setDate(date.getDate() + i);
+        const dateStr = date.toISOString().split('T')[0]; // YYYY-MM-DD format
+        dates.push(dateStr);
+      }
+      
       const routes = [
-        { source: 'New York', destination: 'Boston' },
-        { source: 'Boston', destination: 'New York' },
-        { source: 'New York', destination: 'Philadelphia' },
-        { source: 'Los Angeles', destination: 'San Francisco' }
+        { source: 'Mumbai', destination: 'Pune' },
+        { source: 'Delhi', destination: 'Jaipur' },
+        { source: 'Bangalore', destination: 'Chennai' },
+        { source: 'Hyderabad', destination: 'Bangalore' }
       ];
 
       let allBusesData = [];
